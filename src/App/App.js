@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import studentData from '../helpers/data/studentsData';
 
+import SharkTank from '../components/SharkTank/SharkTank';
+
 class App extends React.Component {
   state = {
     students: [],
@@ -18,7 +20,8 @@ class App extends React.Component {
   render() {
     return (
     <div className="App">
-      <h1> Shark Attack </h1>
+      <h1> Shark Attack React </h1>
+      <SharkTank e10students={this.state.students} />
     </div>
     );
   }
