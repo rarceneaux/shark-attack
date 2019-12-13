@@ -20,7 +20,8 @@ class App extends React.Component {
   render() {
     return (
     <div className="App">
-      <h1> Shark Attack React </h1>
+      {/* <h1> Baby Shark Attack</h1> */}
+      <button className='btn btn-outline-dark'>SHARK <span role="img" aria-label="Shark">🦈</span>ATTACK</button>
       <SharkTank e10students={this.state.students} />
     </div>
     );
