@@ -1,18 +1,28 @@
 import React from 'react';
 import './SharkTank.scss';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
+import LiveStudent from '../LiveStudent/LiveStudent';
+
+import studentShape from '../../helpers/propz/studentShape';
+
 
 class SharkTank extends React.Component {
-  render() {
-    const e10 = this.props.e10students;
+  static propTypes = {
+    e10students: PropTypes.arrayOf(studentShape.studentShape),
+  }
 
-    const studentCards = e10.map((student) => <div key={student.id}>{student.firstName} {student.lastName}</div>);
+  render() {
+    const nss10 = this.props.e10students;
+
+    const studentCards = nss10.map((student) => <LiveStudent key={student.id} student={student}/>);
 
     return (
-      <div className="SharkTank">
-       <h1>SharkTank</h1>
+      <div className="Attack">
+      {/* <button className='btn btn-outline-dark'>SHARK <span role="img" aria-label="Shark">🦈</span>ATTACK</button> */}
+      <div className="SharkTank row d-flex justify-content-center">
+        {/* <LiveStudent/> */}
         {studentCards}
-        {/* <img src=""></img> */}
+      </div>
       </div>
     );
   }
