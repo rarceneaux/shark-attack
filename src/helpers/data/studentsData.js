@@ -7,21 +7,18 @@ const students = [
     firstName: 'Raymond',
     lastName: 'Arceneaux',
     isDead: false,
-    img: 'https://img1.wsimg.com/isteam/ip/b11d58fa-2b9e-47b0-b4ba-a33bacfaed92/Screen%20Shot%202019-09-16%20at%2012.41.30%20AM.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25',
   },
   {
     id: 'student2',
     firstName: 'Alesha',
     lastName: 'Reed',
     isDead: false,
-    img: '',
   },
   {
     id: 'student3',
     firstName: 'Ashley',
     lastName: 'Claiborne',
     isDead: false,
-    img: '',
   },
   {
     id: 'student4',
