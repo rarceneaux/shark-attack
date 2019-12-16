@@ -21,15 +21,23 @@ class App extends React.Component {
     this.setState({ students });
   }
 
-  filterStudent = (students) => {
-    const studentsA = students[Math.floor(Math.random() * students.length)];
-  }
+  // filterStudent = (students) => {
+  //   const studentsA = students[Math.floor(Math.random() * students.length)];
+  // }
 
   // filterStudentEvent = (e) => {
   //   const { student } = studentData.livingStudents();
   //   e.preventDefault();
   //   filterStudent();
   // }
+
+  filterStudentEvent = (e) => {
+    e.preventDefault();
+    const students = studentData.livingStudents();
+    // this.setState({ students });
+    const selectedStudent = students[Math.floor(Math.random() * students.length)];
+    console.log(selectedStudent);
+  }
 
   theyDead = (studentId) => {
     studentData.dearlyBeloved(studentId);
@@ -50,6 +58,7 @@ class App extends React.Component {
       <SharkTank e10students={this.state.students} />
       <Graveyard daStudents={this.state.students} theyDead={this.theyDead} />
       {/* <GraveStone theCodingDead={this.state.dead} /> */}
+
     </div>
     );
   }

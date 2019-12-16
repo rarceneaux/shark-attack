@@ -12,7 +12,9 @@ class SharkTank extends React.Component {
   }
 
   render() {
+    // This is how I am passing props to this component e10students needs to be the same in App.js in the sharktank component 
     const nss10 = this.props.e10students;
+    // console.log(nss10);
 
     const studentCards = nss10.map((student) => <LiveStudent key={student.id} student={student}/>);
 
