@@ -12,15 +12,17 @@ class SharkTank extends React.Component {
   }
 
   render() {
-    const e10 = this.props.e10students;
+    const nss10 = this.props.e10students;
 
-    const studentCards = e10.map((student) => <LiveStudent key={student.id} student={student}/>);
+    const studentCards = nss10.map((student) => <LiveStudent key={student.id} student={student}/>);
 
     return (
+      <div className="Attack">
+      {/* <button className='btn btn-outline-dark'>SHARK <span role="img" aria-label="Shark">🦈</span>ATTACK</button> */}
       <div className="SharkTank row d-flex justify-content-center">
-       {/* <h1>SharkTank</h1> */}
+        {/* <LiveStudent/> */}
         {studentCards}
-        {/* <img src=""></img> */}
+      </div>
       </div>
     );
   }
