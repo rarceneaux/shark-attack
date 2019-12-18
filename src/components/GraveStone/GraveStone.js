@@ -1,24 +1,19 @@
 import React from 'react';
-import Proptypes from 'prop-types';
-
-import './GraveStone.scss';
-
+import PropTypes from 'prop-types';
 import studentShape from '../../helpers/propz/studentShape';
-import Graveyard from '../Graveyard/Graveyard';
+import './GraveStone.scss';
 
 class GraveStone extends React.Component {
   static propTypes = {
-    theCodingDead: Proptypes.arrayOf(studentShape.studentShape),
+    codingDead: PropTypes.arrayOf(studentShape.studentShape),
   }
 
   render() {
-    const dead = this.props.theCodingDead;
-
-    // const dead = deadStudents.map((student) => <Graveyard key={student.id} student={student}/>);
+    const { student } = this.props;
 
     return (
-      <div className="card text-center">
-    <h5 className="card-title">{dead} </h5>
+<div className="card-deadStudent text-center">
+    <h5 className="card-title">{student.firstName} {student.lastName}</h5>
   <div className="card-body">
   </div>
 </div>

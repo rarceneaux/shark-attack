@@ -5,14 +5,14 @@ import studentShape from '../../helpers/propz/studentShape';
 
 class LiveStudent extends React.Component {
   static propTypes = {
-    e10students: PropTypes.arrayOf(studentShape.studentShape),
+    studentList: PropTypes.arrayOf(studentShape.studentShape),
   }
 
   render() {
     const { student } = this.props;
 
     return (
-<div className="card text-center">
+<div className="card-livingStudent text-center">
     <h5 className="card-title">{student.firstName} {student.lastName}</h5>
   <div className="card-body">
   </div>
