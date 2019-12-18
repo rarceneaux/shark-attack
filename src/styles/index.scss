@@ -1,4 +1,6 @@
 @import './variables.scss';
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
 
 body {
   margin: 0;
@@ -14,9 +16,14 @@ code {
     monospace;
 }
 
+.contain {
+  display: -webkit-box; 
+      display: -moz-box;         
+      display: -ms-flexbox;      
+      display: -webkit-flex;     
+      display: flex;
+}
 
-// Background Color
-// .App{
-//   background-color: red;
-// };
-
+.sharkTank{
+  background-color: lightgray;
+}
